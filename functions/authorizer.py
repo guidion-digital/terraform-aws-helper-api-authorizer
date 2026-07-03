@@ -305,8 +305,7 @@ def validate_token(token_to_validate):
     for this_client, this_secret in known_bearer_tokens.items():
         if token_to_validate == this_secret:
             return this_client
-        else:
-            return False
+    return False
 
 if __name__ == "__main__":
     event = {
