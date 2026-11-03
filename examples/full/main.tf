@@ -1,3 +1,6 @@
+# Read README.md before running this: it lists the AWS_* environment variables this example
+# expects, which point every AWS call at MiniStack. CI sets them for you
+
 module "authorizer" {
   source = "../../"
 
