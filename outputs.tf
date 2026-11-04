@@ -10,7 +10,7 @@ output "lambda_invoke_arn" {
 
 output "constructed_lambda_invoke_arn" {
   description = "Constructed ARN that can be used to attach this authoriser"
-  value       = "arn:aws:apigateway:${data.aws_region.current.id}:lambda:path/2015-03-31/functions/arn:aws:lambda:${data.aws_region.current.id}:${data.aws_caller_identity.current.id}:function:${aws_lambda_function.this.function_name}/invocations"
+  value       = "arn:aws:apigateway:${data.aws_region.current.region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${data.aws_region.current.region}:${data.aws_caller_identity.current.id}:function:${aws_lambda_function.this.function_name}/invocations"
 }
 
 output "lambda_name" {

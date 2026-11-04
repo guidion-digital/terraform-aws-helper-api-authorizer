@@ -19,7 +19,7 @@ There are a few ways you could implement the resulting authoriser Lambda:
         action        = "lambda:InvokeFunction"
         function_name = var.authorizer_function_name
         principal     = "apigateway.amazonaws.com"
-        source_arn    = "arn:aws:execute-api:${data.aws_region.current.id}:${data.aws_caller_identity.current.id}:${module.app-x.api_id}/*/*"
+        source_arn    = "arn:aws:execute-api:${data.aws_region.current.region}:${data.aws_caller_identity.current.id}:${module.app-x.api_id}/*/*"
       }
       ```
 
